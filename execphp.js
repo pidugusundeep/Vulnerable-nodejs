@@ -6,14 +6,14 @@ class ExecPHP {
 	*
 	*/
 	constructor() {
-        // path of executable php file in mac (using the default php)
+        
 		this.phpPath = '/usr/bin/php';
 		this.phpFolder = './phpFiles/';
 	}	
 	/**
 	*
     */
-    // arg1, arg2 are passed as arguments into the execution (if any)
+    
 	parseFile(fileName, callback, arg1, arg2, ) {
 		let realFileName = this.phpFolder + fileName;
 		
@@ -24,8 +24,6 @@ class ExecPHP {
 			callback(stdout);
 		});
 	}
-}
-
-module.exports = function() {
+}module.exports = function() {
 	return new ExecPHP();
 };
